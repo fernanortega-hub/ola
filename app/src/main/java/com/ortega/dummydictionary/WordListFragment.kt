@@ -44,13 +44,7 @@ class WordListFragment : Fragment() {
             wordAdapter.setData(data)
         }
 
-        var _words = listOf(
-            Word("Hola", "Es un saludo de entrada"),
-            Word(
-                "Computadora",
-                "Dispositivo electronico"
-            )
-        ).toMutableList()
+        val newWord = Word("Computadora", "dispositivo electronico que se usa para programar y ver videos")
 
         binding.button.setOnClickListener {
             viewModel.addWordVM(newWord)
