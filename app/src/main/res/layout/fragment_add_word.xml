@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.word.AddWordFragment">
+
+    <data>
+        <variable
+            name="wordViewModel"
+            type="com.ortega.dummydictionary.ui.word.WordViewModel" />
+    </data>
+
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/add_wordTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/default_gap"
+            android:layout_marginVertical="@dimen/default_gap"
+            android:hint="@string/add_word"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColorHint="#757575"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <EditText
+            android:id="@+id/Add_definitionTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/default_gap"
+            android:layout_marginVertical="@dimen/small_gap"
+            android:hint="@string/newDefinition"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColorHint="#757575" />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="@dimen/small_gap"
+            android:layout_marginHorizontal="@dimen/default_gap"
+            android:text="@string/add_word"
+            android:id="@+id/addWord_btn"/>
+
+    </LinearLayout>
+</layout>

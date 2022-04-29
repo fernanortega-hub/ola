@@ -1,10 +1,12 @@
-package com.ortega.dummydictionary
+package com.ortega.dummydictionary.ui.word
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.ortega.dummydictionary.R
 import com.ortega.dummydictionary.databinding.ItemWordBinding
+import com.ortega.dummydictionary.data.model.Word
 
 class WordAdapter : RecyclerView.Adapter<WordAdapter.WordViewHolder>() {
 

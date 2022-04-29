@@ -1,22 +1,28 @@
-package com.ortega.dummydictionary
+package com.ortega.dummydictionary.ui.word
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
+import android.widget.Button
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.MutableLiveData
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
+import com.ortega.dummydictionary.DummyDictionaryApplication
+import com.ortega.dummydictionary.R
 import com.ortega.dummydictionary.databinding.FragmentWordListBinding
+import com.ortega.dummydictionary.data.model.Word
+import com.ortega.dummydictionary.repository.DictionaryRepository
 
 class WordListFragment : Fragment() {
     private lateinit var binding: FragmentWordListBinding
 
     private val viewModelFactory by lazy {
-        val repository = DictionaryRepository()
-        WordViewModelFactory(repository)
+        val application = requireActivity().application as DummyDictionaryApplication
+        WordViewModelFactory(application.getDictionaryRepository())
     }
 
     private val viewModel: WordViewModel by viewModels {
@@ -44,15 +50,18 @@ class WordListFragment : Fragment() {
             wordAdapter.setData(data)
         }
 
-        val newWord = Word("Computadora", "dispositivo electronico que se usa para programar y ver videos")
-
-        binding.button.setOnClickListener {
-            viewModel.addWordVM(newWord)
+        binding.actionAddWord.setOnClickListener{
+            it.findNavController().navigate(R.id.action_wordListFragment_to_addWordFragment)
         }
+
+
+
+
 
 
     }
 
 
 }
+
 

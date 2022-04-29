@@ -5,4 +5,8 @@
     <string name="new_word">Agrega una nueva palabra</string>
     <string name="newDefinition">Agrega la definicion</string>
     <string name="add_word">Agregar palabra</string>
+    <string name="add_term">Agrega el termino</string>
+    <string name="isFavTrue">Es favorito</string>
+    <string name="isNotFav">No es favorito</string>
+    <string name="newFav">Si es favorito agrega 1, si no lo es 0</string>
 </resources>

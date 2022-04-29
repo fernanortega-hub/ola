@@ -6,7 +6,7 @@
 
         <variable
             name="word"
-            type="com.ortega.dummydictionary.Word" />
+            type="com.ortega.dummydictionary.data.model.Word" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -23,7 +23,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{word.word}"
+                android:text="@{word.term}"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
                 tools:text="Palabra" />
 
